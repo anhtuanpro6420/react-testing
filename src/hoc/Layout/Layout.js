@@ -10,20 +10,20 @@ import Nav from '../../components/Menu/Menu';
 const { Header, Footer, Sider, Content } = LayoutAnt;
 
 const Layout = props => {
-	const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
+  const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
 
-	// const sideDrawerClosedHandler = () => {
-	//   setSideDrawerIsVisible(false);
-	// };
+  // const sideDrawerClosedHandler = () => {
+  //   setSideDrawerIsVisible(false);
+  // };
 
-	const sideDrawerToggleHandler = () => {
-		setSideDrawerIsVisible(!sideDrawerIsVisible);
-	};
+  const sideDrawerToggleHandler = () => {
+    setSideDrawerIsVisible(!sideDrawerIsVisible);
+  };
 
-	return (
-		<>
-			<Nav />
-			{/* <Toolbar
+  return (
+    <>
+      <Nav {...props} />
+      {/* <Toolbar
         isAuth={props.isAuthenticated}
         drawerToggleClicked={sideDrawerToggleHandler}
       />
@@ -32,15 +32,16 @@ const Layout = props => {
         open={sideDrawerIsVisible}
         closed={sideDrawerClosedHandler}
       /> */}
-			<main className={classes.Content}>{props.children}</main>
-		</>
-	);
+      <main className={classes.Content}>{props.children}</main>
+    </>
+  );
 };
 
 const mapStateToProps = state => {
-	return {
-		isAuthenticated: state.auth.token !== null
-	};
+  return {
+    isAuthenticated: state.auth.token !== null,
+    user: state.auth.user
+  };
 };
 
 export default connect(mapStateToProps)(Layout);
