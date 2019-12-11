@@ -20,16 +20,16 @@ class Login extends React.Component {
 		});
 	};
 
-	componentWillReceiveProps(nextProps) {
-		if (nextProps.success && nextProps.data !== this.props.data) {
-			const token = nextProps.data.token;
-			const email = nextProps.data.user.email;
+	componentDidUpdate(prevProps) {
+		if (this.props.success && prevProps.data !== this.props.data) {
+			const token = this.props.data.token;
+			const email = this.props.data.user.email;
 			setAuth(token, email);
 			setAuthToken();
 			this.props.history.push('/');
 		}
-		if (nextProps.errors && nextProps.errors !== this.props.errors) {
-			openNotification('error', nextProps.errors.message);
+		if (this.props.errors && prevProps.errors !== this.props.errors) {
+			openNotification('error', this.props.errors.message);
 		}
 	}
 

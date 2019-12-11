@@ -1,4 +1,9 @@
-export { auth, logout, setAuthRedirectPath, authCheckState } from './auth';
+export {
+	auth,
+	logout,
+	setAuthRedirectPath,
+	authCheckState
+} from './authAction';
 // export {
 //     purchaseBurger,
 //     purchaseInit,
