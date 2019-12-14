@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import 'antd/dist/antd.css';
-import './Navbar.css';
+import './Navbar.scss';
 import { Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import { Layout } from 'antd';

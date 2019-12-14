@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { getCurrentUser, removeAuth } from '../../core/services/storageService';
-import './Header.css';
+import './Header.scss';
 import HomeIcon from '../../assets/images/home-icon.svg';
 
 const header = () => (
