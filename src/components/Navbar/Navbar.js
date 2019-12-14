@@ -16,11 +16,15 @@ const Navbar = props => {
 				<Menu.Item key="home">
 					<Link to="/home">Home</Link>
 				</Menu.Item>
-				{props.isAuthenticated && (
+				{props.isAuthenticated ? (
 					<Menu.Item key="profile">
 						<Link to="/profile">
 							{props.user && props.user.email}
 						</Link>
+					</Menu.Item>
+				) : (
+					<Menu.Item key="signUp">
+						<Link to="/sign-up">Sign up</Link>
 					</Menu.Item>
 				)}
 				{props.isAuthenticated ? (

@@ -7,6 +7,7 @@ import Newsfeed from './containers/Newsfeed/Newsfeed';
 import Layout from './hoc/Layout/Layout';
 import Logout from './containers/Auth/Logout/Logout';
 import * as actions from './store/actions/index';
+import SignUp from './containers/Signup/Signup';
 
 const Auth = React.lazy(() => {
 	return import('./containers/Auth/Auth');
@@ -21,6 +22,7 @@ const App = props => {
 	let routes = (
 		<Switch>
 			<Route path="/auth" render={props => <Auth {...props} />} />
+			<Route path="/sign-up" component={SignUp} />} />
 			<Redirect to="/auth" />
 		</Switch>
 	);
