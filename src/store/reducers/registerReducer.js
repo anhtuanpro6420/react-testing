@@ -1,4 +1,4 @@
-import { REGISTER_REQUEST, REGISTER_SUCCESS } from '../actions/types';
+import { REGISTER_REQUEST, REGISTER_SUCCESS } from '../actions/actionTypes';
 
 const initialState = {
 	success: false,

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Layout } from 'antd';
 import { connect } from 'react-redux';
-import { getPosts } from '../../../src/store/actions/newsfeedAction';
+import { getPosts } from '../../store/actions/newsfeedAction';
 import './Newsfeed.scss';
 import {
 	getAuthToken,
 	getCurrentUser,
 	setAuth,
 	setAuthToken
-} from '../../core/services/storageService';
+} from '../../shared/services/storageService';
 const { Content } = Layout;
 
 class Newsfeed extends React.Component {

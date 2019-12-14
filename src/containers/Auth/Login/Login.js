@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Icon, Input, Button, Layout } from 'antd';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { login } from '../../../src/store/actions/authAction';
+import { login } from '../../../store/actions/authAction';
 import { setAuth, setAuthToken } from '../../core/services/storageService';
 import Header from '../../components/Header/Header';
 import { PageHeader } from 'antd';

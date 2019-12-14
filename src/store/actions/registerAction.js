@@ -1,5 +1,5 @@
 import axios from '../../axios';
-import { REGISTER_REQUEST, REGISTER_SUCCESS, GET_ERRORS } from './types';
+import { REGISTER_REQUEST, REGISTER_SUCCESS, GET_ERRORS } from './actionTypes';
 
 export const register = userData => dispatch => {
 	dispatch({

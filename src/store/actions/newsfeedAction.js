@@ -1,5 +1,9 @@
 import axios from '../../axios';
-import { GET_POSTS_REQUEST, GET_POSTS_SUCCESS, GET_ERRORS } from './types';
+import {
+	GET_POSTS_REQUEST,
+	GET_POSTS_SUCCESS,
+	GET_ERRORS
+} from './actionTypes';
 
 export const getPosts = () => dispatch => {
 	dispatch({

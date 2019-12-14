@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Icon, Input, Button } from 'antd';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { register } from '../../../src/store/actions/registerAction';
+import { register } from '../../store/actions/registerAction';
 import { openNotification } from '../../components/Notification/notification';
 
 class Signup extends React.Component {

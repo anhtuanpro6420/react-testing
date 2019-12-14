@@ -2,7 +2,6 @@ import React, { useEffect, Suspense } from 'react';
 import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './App.scss';
-import 'antd/dist/antd.css';
 import Newsfeed from './containers/Newsfeed/Newsfeed';
 import Layout from './hoc/Layout/Layout';
 import Logout from './containers/Auth/Logout/Logout';
